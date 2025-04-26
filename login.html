@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+    </head>
+<body>
+
+    <div class="signup-box">
+        <h2>Welcome Back</h2>
+        <form>
+          <div class="input-group">
+            <input type="email" id="email" placeholder=" " required />
+            <label for="email">Email</label>
+          </div>
+          <div class="input-group">
+            <input type="password" id="password" placeholder=" " required />
+            <label for="password">Password</label>
+          </div>
+    
+          <div class="show-pass">
+            <input type="checkbox" id="togglePass"/>
+            <label for="togglePass">Show Password</label>
+          </div>
+    
+          <button type="submit">Log In</button>
+        </form>
+        <div class="login-link">
+          <p>Don't have an account? <a href="index.html">Sign Up</a></p>
+        </div>
+      </div>
+    
+      <script>
+        document.getElementById('togglePass').addEventListener('change', function () {
+          const pass = document.getElementById('password');
+          pass.type = this.checked ? 'text' : 'password';
+        });
+      </script>
+
+   
+</body>
+</html>
