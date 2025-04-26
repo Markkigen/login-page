@@ -187,5 +187,69 @@
     color: var(--hover-color);
     text-decoration: underline;
   }
+
+  .or-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+    color: var(--label-color);
+  }
+  
+  .or-divider::before,
+  .or-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #ddd;
+    margin: 0 10px;
+  }
+  
+  .social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .social-login button {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+    color: #444;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .google-btn {
+    background-color: #fff;
+    border-color: #ddd;
+  }
+  
+  .google-btn:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .facebook-btn {
+    background-color: #3b5998;
+    color: white;
+    border: none;
+  }
+  
+  .facebook-btn:hover {
+    background-color: #2d4373;
+  }
+  
+  .apple-btn {
+    background-color: #000;
+    color: white;
+    border: none;
+  }
+  
+  .apple-btn:hover {
+    background-color: #333;
+  }
+  
   
   
