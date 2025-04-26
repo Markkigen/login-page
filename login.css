@@ -1,6 +1,38 @@
 
+    
+    
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+    
+    html, body {
+        height: 100%;
+    }
 
-* {
+    
+    
+    
+
+
+:root {
+    --primary-color: #1c92d2;
+    --hover-color: #156fa3;
+    --bg-color: #ffffff;
+    --text-color: #333;
+    --label-color: #999;
+    --input-border: #ccc;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary-color: #00b4ff;
+      --hover-color: #007bb3;
+      --bg-color: #1a1a1a;
+      --text-color: #f2f2f2;
+      --label-color: #aaa;
+      --input-border: #444;
+    }
+  }
+  
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,15 +40,17 @@
   }
   
   body {
-    background: linear-gradient(to right, #1c92d2, #f2fcfe);
+    background: linear-gradient(to right, var(--primary-color), #f2fcfe);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
   }
   
   .signup-box {
-    background-color: #ffffff;
+    background-color: var(--bg-color);
     padding: 40px;
     border-radius: 16px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
@@ -27,7 +61,7 @@
   .signup-box h2 {
     text-align: center;
     margin-bottom: 24px;
-    color: #333;
+    color: var(--text-color);
   }
   
   .input-group {
@@ -38,21 +72,21 @@
   .input-group input {
     width: 100%;
     padding: 14px 12px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--input-border);
     border-radius: 8px;
     background: transparent;
     font-size: 16px;
     outline: none;
-    transition: border-color 0.3s;
+    color: var(--text-color);
   }
   
   .input-group label {
     position: absolute;
     left: 12px;
     top: 14px;
-    background-color: white;
+    background-color: var(--bg-color);
     padding: 0 6px;
-    color: #999;
+    color: var(--label-color);
     font-size: 14px;
     transition: 0.2s ease all;
     pointer-events: none;
@@ -60,7 +94,7 @@
   
   .input-group input:focus,
   .input-group input:valid {
-    border-color: #1c92d2;
+    border-color: var(--primary-color);
   }
   
   .input-group input:focus + label,
@@ -68,7 +102,7 @@
     top: -10px;
     left: 10px;
     font-size: 12px;
-    color: #1c92d2;
+    color: var(--primary-color);
   }
   
   .show-pass {
@@ -76,18 +110,18 @@
     align-items: center;
     font-size: 14px;
     margin-bottom: 20px;
-    color: #444;
+    color: var(--text-color);
   }
   
   .show-pass input {
     margin-right: 8px;
-    accent-color: #1c92d2;
+    accent-color: var(--primary-color);
   }
   
   button[type="submit"] {
     width: 100%;
     padding: 12px;
-    background-color: #1c92d2;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     border-radius: 8px;
@@ -98,7 +132,7 @@
   }
   
   button[type="submit"]:hover {
-    background-color: #156fa3;
+    background-color: var(--hover-color);
   }
   
   .login-link {
@@ -108,12 +142,24 @@
   }
   
   .login-link a {
-    color: #1c92d2;
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: bold;
   }
   
   .login-link a:hover {
     text-decoration: underline;
+  }
+  
+  /* Responsive */
+  @media (max-width: 480px) {
+    .signup-box {
+      padding: 30px 20px;
+      border-radius: 12px;
+    }
+  
+    button[type="submit"] {
+      font-size: 15px;
+    }
   }
   
