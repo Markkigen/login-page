@@ -38,7 +38,7 @@
   }
   
   body {
-    background: linear-gradient(to right, var(--primary-color), #f2fcfe);
+    background: radial-gradient(circle at top left, #fdfdfd, #f2fcfe);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -46,6 +46,7 @@
     color: var(--text-color);
     transition: all 0.3s ease-in-out;
   }
+  
   
   .signup-box {
     background-color: var(--bg-color);
@@ -149,7 +150,15 @@
     text-decoration: underline;
   }
   
-  /* Responsive */
+    .error-message {
+        color: red;
+        font-size: 14px;
+        margin-top: 8px;
+        text-align: center;
+    }
+
+
+
   @media (max-width: 480px) {
     .signup-box {
       padding: 30px 20px;
@@ -160,4 +169,23 @@
       font-size: 15px;
     }
   }
+
+  .forgot-password {
+    text-align: center;
+    margin-top: 12px;
+  }
+  
+  .forgot-password a {
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .forgot-password a:hover {
+    color: var(--hover-color);
+    text-decoration: underline;
+  }
+  
   
