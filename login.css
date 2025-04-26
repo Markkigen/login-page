@@ -250,6 +250,24 @@
   .apple-btn:hover {
     background-color: #333;
   }
+  .terms-conditions {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 16px;
+    color: var(--text-color);
+  }
   
+  .terms-conditions a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .terms-conditions a:hover {
+    color: var(--hover-color);
+    text-decoration: underline;
+  }
+    
   
   
