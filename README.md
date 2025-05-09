@@ -37,7 +37,7 @@ bash
 
 1. Clone this repo:
    
-   git clone https://github.com/yourusername/login-page.git
+   [git clone https://github.com/yourusername/login-page.git](https://github.com/Markkigen/login-page.git)
 
    
 Open the login.html file in your browser:
